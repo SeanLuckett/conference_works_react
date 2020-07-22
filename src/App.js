@@ -1,5 +1,12 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
+import Homepage from './components/homepage/Homepage';
+import Register from './components/register/Register';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
@@ -9,10 +16,12 @@ function App() {
   return (
     <section id="content" className={styles.App}>
       <Header />
-      <section>
-        <p>Welcome to ConferenceWorks: a real website for a fake software conference.</p>
-        <p><a href="#">Register</a> now before this event sells out!</p>
-      </section>
+      <Router>
+        <Switch>
+          <Route exact path="/"><Homepage /></Route>
+          <Route path="/register"><Register /></Route>
+        </Switch>
+      </Router>
       <Footer />
     </section>
   );
