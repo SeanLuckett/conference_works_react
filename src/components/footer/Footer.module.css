@@ -1,8 +1,8 @@
 footer {
   font-size: .85em;
+  background-color: #cccccc;
 }
 
 footer span {
   font-weight: bold;
-  color: #008000;
-}
+    color: #008000;}
