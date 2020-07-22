@@ -6,7 +6,7 @@ const footer = () => {
   return (
     <section>
       <footer>
-        &#169; 2020, <span>Conference</span> Works
+        <p className={styles.Copyright}>&#169; 2020, <span>Conference</span> Works</p>
       </footer>
     </section>
   )

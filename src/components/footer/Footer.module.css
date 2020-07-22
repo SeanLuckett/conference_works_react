@@ -1,6 +1,13 @@
 footer {
-  font-size: .85em;
+  display: flex;
+  min-height: 4em;
   background-color: #cccccc;
+  padding-left: 2em;
+}
+
+.Copyright {
+  font-size: .65em;
+  align-self: center;
 }
 
 footer span {
