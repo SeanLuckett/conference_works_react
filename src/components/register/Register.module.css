@@ -1,0 +1,15 @@
+.Form {
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+}
+
+.FormItem {
+  margin-bottom: 1em;
+  align-self: flex-end;
+}
+
+h1 {
+  font-size: 2em;
+  margin-left: 0.67em;
+}
