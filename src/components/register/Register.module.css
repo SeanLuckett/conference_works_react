@@ -8,3 +8,12 @@ h1 {
   font-size: 2em;
   margin-left: 0.67em;
 }
+
+.FormButton {
+  width: 80px;
+  margin-left: 1em;
+}
+
+.ButtonGroup {
+  align-self: flex-end;
+}

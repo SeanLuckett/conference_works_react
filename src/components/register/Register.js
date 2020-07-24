@@ -12,6 +12,10 @@ const register = () => {
         <FormItem label="Last name" inputType="text" />
         <FormItem label="Email" inputType="email" />
         <FormItem label="Password" inputType="password" />
+        <formgroup className={styles.ButtonGroup}>
+          <button className={styles.FormButton} type="submit">Register</button>
+          <button className={styles.FormButton} type="reset">Reset</button>
+        </formgroup>
       </form>
     </section>
   );
