@@ -1,7 +1,5 @@
 .Form {
-  display: flex;
-  flex-direction: column;
-  max-width: 25%;
+  max-width: 50%;
 }
 
 h1 {
@@ -15,5 +13,6 @@ h1 {
 }
 
 .ButtonGroup {
-  align-self: flex-end;
+  margin: 10px 0px 0px 8em;
+  border: none;
 }
