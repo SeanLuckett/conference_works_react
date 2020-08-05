@@ -1,0 +1,33 @@
+header {
+  padding: 2em;
+  background-color: #000000;
+}
+
+header h1 {
+  margin-right: 0.75em;
+}
+
+header h1, nav {
+  font-size: 2em;
+  display: inline;
+}
+
+header a {
+  margin-right: 0.75em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header a:hover {
+  border-bottom: 2px solid #008000;
+}
+
+.Logo {
+  font-weight: bold;
+  color: #008000;
+}
+
+.NavItem {
+  font-size: 0.5em;
+  text-transform: uppercase;
+}

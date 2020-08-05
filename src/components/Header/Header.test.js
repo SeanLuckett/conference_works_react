@@ -9,15 +9,16 @@ configure({ adapter: new Adapter() });
 
 describe('<Header />', () => {
   const component = shallow(<Header />);
+
   it('renders logo', () => {
     expect(component.find('h1').text()).toBe('ConferenceWorks');
   });
   
   it('renders "Schedule" link', () => {
-    expect(component.find('a').at(0).text()).toBe('Schedule');
+    expect(component.find('a').at(1).text()).toBe('Schedule');
   });
 
   it('renders "Speakers" link', () => {
-    expect(component.find('a').at(1).text()).toBe('Speakers');
+    expect(component.find('a').at(2).text()).toBe('Speakers');
   });
 });
