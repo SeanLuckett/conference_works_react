@@ -7,9 +7,9 @@ function App() {
   return (
     <div>
       <section><Header /></section>
-      <section>
+      <main>
         <p>Welcome to ConferenceWorks: a real website for a fake software conference.</p>
-      </section>
+      </main>
       <section>
         <Footer />
       </section>
