@@ -10,12 +10,25 @@ export default class Schedule extends React.Component {
 
   buildRows() {
     return this.state.sessions.map((session, index) => {
-      return (
-        <tr key={index}>
-          <td>{session.times[0]} - {session.times[1]}</td>
-          <td colSpan={2}>{session.talk}</td>
-        </tr>
-      );
+      if (session.speaker !== null) {
+        return (
+          <tr key={index}>
+            <td>{session.times[0]} - {session.times[1]}</td>
+            <td colSpan={2}>
+              <strong>{session.talk}</strong>
+              <br />
+              {session.speaker}
+            </td>
+          </tr>
+        );
+      } else {
+        return (
+          <tr key={index}>
+            <td>{session.times[0]} - {session.times[1]}</td>
+            <td colSpan={2}>{session.talk}</td>
+          </tr>
+        );
+      }
     })
   }
   render() {
