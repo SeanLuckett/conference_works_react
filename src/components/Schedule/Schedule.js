@@ -1,36 +1,19 @@
 import React from 'react';
 
+import ScheduleSession from '../ScheduleSession/ScheduleSession';
 import json from './scheduleData';
 
 export default class Schedule extends React.Component {
-  constructor() {
-    super();
-    this.state = json;
-  }
+  state = json;
 
   buildRows() {
     return this.state.sessions.map((session, index) => {
-      if (session.speaker !== null) {
-        return (
-          <tr key={index}>
-            <td>{session.times[0]} - {session.times[1]}</td>
-            <td colSpan={2}>
-              <strong>{session.talk}</strong>
-              <br />
-              {session.speaker}
-            </td>
-          </tr>
-        );
-      } else {
-        return (
-          <tr key={index}>
-            <td>{session.times[0]} - {session.times[1]}</td>
-            <td colSpan={2}>{session.talk}</td>
-          </tr>
-        );
-      }
+      return (
+        <ScheduleSession key={index} data={session} />
+      );
     })
   }
+
   render() {
     return (
       <table>
