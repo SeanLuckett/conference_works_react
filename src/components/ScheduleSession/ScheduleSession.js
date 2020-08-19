@@ -1,65 +1,46 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import styles from './ScheduleSession.module.css';
 
-function nonSpeakerRow(id, times, talks) {
-  if (talks.length === 1 && talks[0] === '[Transition]') {
-    return (
-      <tr key={id}>
-        <td>{times[0]} - {times[1]}</td>
-        <td className={styles.TransitionSession} colSpan={2}>{talks[0]}</td>
-      </tr>
-    );
-  } else {
-    return (
-      <tr key={id}>
-        <td>{times[0]} - {times[1]}</td>
-        <td colSpan={2}>{talks[0]}</td>
-      </tr>
-    );
-  }
+function addTimes(times) {
+  return <td>{times[0]} - {times[1]}</td>
 }
 
-function speakerRow(id, times, talks, speakers) {
-  if (talks.length > 1) {
-    return (
-      <tr key={id}>
-        <td>{times[0]} - {times[1]}</td>
-        <td>
-          <strong>{talks[0]}</strong>
-          <br />
-          {speakers[0]}
-        </td>
-        <td>
-          <strong>{talks[1]}</strong>
-          <br />
-          {speakers[1]}
-        </td>
-      </tr>
-    )
-  } else {
-    return (
-      <tr key={id}>
-        <td>{times[0]} - {times[1]}</td>
-        <td colSpan={2}>
-          <strong>{talks[0]}</strong>
-          <br />
-          {speakers[0]}
-        </td>
-      </tr>
-    )
+function addNonSpeakerSlot(talks) {
+  if (talks.length === 1 && talks[0] === '[Transition]') {
+    return <td className={styles.TransitionSession} colSpan={2}>{talks[0]}</td>;
   }
+
+  return <td colSpan={2}>{talks[0]}</td>
+}
+
+function addSpeakerSlots(talks, speakers) {
+  const isSingleSpeaker = talks.length === 1 ? 2 : null;
+
+  return (
+    <Fragment>
+      {talks.map((talk, index) => {
+        return (
+          <td key={index} colSpan={isSingleSpeaker}>
+            <strong>{talk}</strong>
+            <br />
+            {speakers[index]}
+          </td>)
+      })}
+    </Fragment>
+  );
 }
 
 const scheduleSession = (props) => {
   const { times, talks, speakers } = props.data;
   const id = props.id;
 
-  if (speakers.length !== 0) {
-    return speakerRow(id, times, talks, speakers)
-  } else {
-    return nonSpeakerRow(id, times, talks);
-  }
+  return (
+    <tr key={id}>
+      {addTimes(times)}
+      {speakers.length === 0 ? addNonSpeakerSlot(talks) : addSpeakerSlots(talks, speakers)}
+    </tr>
+  )
 };
 
 export default scheduleSession;

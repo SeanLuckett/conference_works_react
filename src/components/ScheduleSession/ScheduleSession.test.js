@@ -45,6 +45,10 @@ describe('given a single speaking session', () => {
     expect(speakerRow.childAt(1).html()).toContain('<strong>');
   });
 
+  it('title spans 2 columns', () => {
+    expect(speakerRow.childAt(1).prop('colSpan')).toBe(2);
+  });
+
   it('includes the speaker as a subtitle', () => {
     expect(speakerRow.childAt(1).text()).toContain(expectedData.speakers);
   });
