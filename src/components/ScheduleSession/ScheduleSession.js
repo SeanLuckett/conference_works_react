@@ -1,12 +1,23 @@
 import React from 'react';
 
+import styles from './ScheduleSession.module.css';
+
 function nonSpeakerRow(id, times, talks) {
-  return (
-    <tr key={id}>
-      <td>{times[0]} - {times[1]}</td>
-      <td colSpan={2}>{talk}</td>
-    </tr>
-  );
+  if (talks.length === 1 && talks[0] === '[Transition]') {
+    return (
+      <tr key={id}>
+        <td>{times[0]} - {times[1]}</td>
+        <td className={styles.TransitionSession} colSpan={2}>{talks[0]}</td>
+      </tr>
+    );
+  } else {
+    return (
+      <tr key={id}>
+        <td>{times[0]} - {times[1]}</td>
+        <td colSpan={2}>{talks[0]}</td>
+      </tr>
+    );
+  }
 }
 
 function speakerRow(id, times, talks, speakers) {
