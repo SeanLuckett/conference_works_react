@@ -6,7 +6,7 @@ const speaker = (props) => {
   return (
     <figure>
       <a href="">
-        <img src={`../../../images/speakers/${imageFolder}/${props.image}`} alt={props.name} />
+        <img src={`${process.env.PUBLIC_URL}/images/speakers/${imageFolder}/${props.image}`} alt={props.name} />
         <figcaption>
           <span>{props.name}</span>
           <br />
