@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Speaker.module.css';
+
 const speaker = (props) => {
   const imageFolder = props.image.split('-')[0];
   

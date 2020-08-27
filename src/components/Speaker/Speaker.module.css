@@ -1,0 +1,12 @@
+figure {
+  display: inline-block;
+}
+
+figure img {
+  height: 300px;
+  width: 300px;
+}
+
+span:first-child {
+  font-weight: bold;
+}

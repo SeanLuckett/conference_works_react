@@ -60,7 +60,7 @@ export default {
     },
     {
       "name": "Brian Sletten",
-      "role": "Forward Leaning Software Engineer (does that even mean anything?)",
+      "role": "Forward Leaning Software Engineer",
       "image": "brian-300.png",
       "about": [
         "Brian Sletten is a liberal arts-educated software engineer with a focus on forward-leaning technologies. His experience has spanned many industries including retail, banking, online games, defense, finance, hospitality and health care. He has a B.S. in Computer Science from the College of William and Mary and lives in Auburn, CA. He focuses on web architecture, resource-oriented computing, social networking, the Semantic Web, data science, 3D graphics, visualization, scalable systems, security consulting and other technologies of the late 20th and early 21st Centuries. He is also a rabid reader, devoted foodie and has excellent taste in music.",

@@ -9,7 +9,7 @@ const header = () => {
       <h1><a href="#"><span className={styles.Logo}>Conference</span>Works</a></h1>
       <nav>
         <Link className={styles.NavItem} to="/schedule">Schedule</Link>
-        <a className={styles.NavItem} href="#">Speakers</a>
+        <Link className={styles.NavItem} to="/speakers">Speakers</Link>
       </nav>
     </header>
   );
