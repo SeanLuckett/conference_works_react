@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Route } from 'react-router-dom';
 
 import Speaker from '../Speaker/Speaker';
 import json from './speakerData';
@@ -6,7 +7,7 @@ import json from './speakerData';
 export default class Speakers extends React.Component {
   state = json;
 
-  speakers =  this.state.speakers.map((speaker, index) => {
+  speakers = this.state.speakers.map((speaker, index) => {
     return (
       <Speaker
         key={index}

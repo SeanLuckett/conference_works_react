@@ -16,13 +16,10 @@ function App() {
       <section><Header /></section>
       <main>
         <Switch>
-          <Route path="/schedule">
-            <Schedule />
-          </Route>
-          <Route path="/speakers">
-            <Speakers />
-          </Route>
-          <Route path="/">
+          <Route path="/schedule" component={Schedule} />
+          <Route exact path="/speakers" component={Speakers} />
+          {/* <Route exact path="/speakers/:id" component={SpeakerDetail} /> */}
+          <Route exact path="/">
             <p>Welcome to ConferenceWorks: a real website for a fake software conference.</p>
           </Route>
         </Switch>
