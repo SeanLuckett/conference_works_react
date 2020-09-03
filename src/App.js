@@ -9,6 +9,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Schedule from './components/Schedule/Schedule';
 import Speakers from './components/Speakers/Speakers';
+import SpeakerDetail from './components/SpeakerDetail/SpeakerDetail';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Switch>
           <Route path="/schedule" component={Schedule} />
           <Route exact path="/speakers" component={Speakers} />
-          {/* <Route exact path="/speakers/:id" component={SpeakerDetail} /> */}
+          <Route exact path="/speakers/:id" component={SpeakerDetail} />
           <Route exact path="/">
             <p>Welcome to ConferenceWorks: a real website for a fake software conference.</p>
           </Route>
