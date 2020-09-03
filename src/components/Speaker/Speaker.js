@@ -4,16 +4,16 @@ import { Route, Link } from 'react-router-dom'
 import './Speaker.module.css';
 
 const speaker = (props) => {
-  const imageFolder = props.image.split('-')[0];
+  const { id, name, image, role } = props;
 
   return (
     <figure>
-      <Link to={`/speakers/${imageFolder}`}>
-        <img src={`${process.env.PUBLIC_URL}/images/speakers/${imageFolder}/${props.image}`} alt={props.name} />
+      <Link to={`/speakers/${id}`}>
+        <img src={`${process.env.PUBLIC_URL}/images/speakers/${id}/${image}`} alt={name} />
         <figcaption>
-          <span>{props.name}</span>
+          <span>{name}</span>
           <br />
-          <span>{props.role}</span>
+          <span>{role}</span>
         </figcaption>
       </Link>
     </figure>

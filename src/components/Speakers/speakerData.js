@@ -1,6 +1,7 @@
 export default {
   "speakers": [
     {
+      "id": "venkat",
       "name": "Dr. Venkat Subramaniam",
       "role": "Founder of Agile Developer, Inc.",
       "image": "venkat-300.jpg",
@@ -16,6 +17,7 @@ export default {
       ]
     },
     {
+      "id": "rebecca",
       "name": "Dr. Rebecca Parsons",
       "role": "Chief Technology Officer, ThoughtWorks",
       "image": "rebecca-300.jpg",
@@ -31,6 +33,7 @@ export default {
       ]
     },
     {
+      "id": "neal",
       "name": "Neal Ford",
       "role": "Software Architect, ThoughtWorks",
       "image": "neal-300.jpg",
@@ -45,6 +48,7 @@ export default {
       ]
     },
     {
+      "id": "mark",
       "name": "Mark Richards",
       "role": "Author, Enterprise Architect",
       "image": "mark-300.jpg",
@@ -59,6 +63,7 @@ export default {
       ]
     },
     {
+      "id": "brian",
       "name": "Brian Sletten",
       "role": "Forward Leaning Software Engineer",
       "image": "brian-300.png",
@@ -73,6 +78,7 @@ export default {
       ]
     },
     {
+      "id": "scott",
       "name": "Scott Davis",
       "role": "Web Architect, ThoughtWorks",
       "image": "scott-300.png",

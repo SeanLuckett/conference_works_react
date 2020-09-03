@@ -11,6 +11,7 @@ export default class Speakers extends React.Component {
     return (
       <Speaker
         key={index}
+        id={speaker.id}
         name={speaker.name}
         role={speaker.role}
         image={speaker.image} />
