@@ -13,12 +13,10 @@ describe('<Header />', () => {
   it('renders logo', () => {
     expect(component.find('h1').text()).toBe('ConferenceWorks');
   });
-  
-  it('renders "Schedule" link', () => {
-    expect(component.find('a').at(1).text()).toBe('Schedule');
-  });
 
-  it('renders "Speakers" link', () => {
-    expect(component.find('a').at(2).text()).toBe('Speakers');
+  it('renders links', () => {
+    expect(component.find('Link').at(0).text()).toBe('ConferenceWorks');
+    expect(component.find('Link').at(1).text()).toBe('Schedule');
+    expect(component.find('Link').at(2).text()).toBe('Speakers');
   });
 });

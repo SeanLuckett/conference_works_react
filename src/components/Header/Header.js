@@ -6,7 +6,7 @@ import styles from './Header.module.css';
 const header = () => {
   return (
     <header>
-      <h1><a href="#"><span className={styles.Logo}>Conference</span>Works</a></h1>
+      <h1><Link to="/"><span className={styles.Logo}>Conference</span>Works</Link></h1>
       <nav>
         <Link className={styles.NavItem} to="/schedule">Schedule</Link>
         <Link className={styles.NavItem} to="/speakers">Speakers</Link>
