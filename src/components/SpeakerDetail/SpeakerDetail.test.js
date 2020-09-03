@@ -28,10 +28,26 @@ jest.mock('../Speakers/speakerData', () => {
 });
 
 describe('<SpeakerDetail />', () => {
-  const component = shallow(<SpeakerDetail match={{ path: 'speakers/john' }} />);
+  const component = shallow(<SpeakerDetail match={{ params: { id: 'john' } }} />);
 
   it('displays speaker name', () => {
     expect(component.find('h1').text()).toBe('John Cleese');
   });
 
+  it('displays an image of the speaker', () => {
+    expect(component.find('img').prop('src')).toContain('/john/john-300.jpg');
+    expect(component.find('img').prop('alt')).toContain('John Cleese');
+  });
+
+  it('displays an About section', () => {
+    expect(component.find('h2').at(0).text()).toBe('About');
+    expect(component.find('p').at(0).text()).toBe('Paragraph 1');
+    expect(component.find('p').at(1).text()).toBe('Paragraph 2');
+  });
+
+  it('displays speaker talks', () => {
+    expect(component.find('h2').at(1).text()).toBe('Talks');
+    expect(component.find('li').at(0).text()).toBe('Talk 1');
+    expect(component.find('li').at(1).text()).toBe('Talk 2');
+  });
 });
