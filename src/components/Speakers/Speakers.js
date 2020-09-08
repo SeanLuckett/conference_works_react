@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { Route } from 'react-router-dom';
 
 import Speaker from '../Speaker/Speaker';
 import json from './speakerData';
