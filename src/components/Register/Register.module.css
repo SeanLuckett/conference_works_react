@@ -1,0 +1,18 @@
+.Form {
+  max-width: 50%;
+}
+
+h1 {
+  font-size: 2em;
+  margin-left: 0.67em;
+}
+
+.FormButton {
+  width: 80px;
+  margin-left: 1em;
+}
+
+.ButtonGroup {
+  margin: 10px 0px 0px 8em;
+  border: none;
+}

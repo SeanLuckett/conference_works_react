@@ -1,0 +1,31 @@
+.FormItem {
+  margin-bottom: 3px;
+}
+
+.FormItem label {
+  width: 10em;
+  display: inline-block;
+  text-align: right;
+}
+
+.FormItem input {
+  margin: 0px 3px;
+  padding: 1px 2px;
+}
+
+.FormItem span {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.Hidden {
+  display: none;
+}
+
+.Valid {
+  color: #008000;
+}
+
+.Invalid {
+  color: #ff0000;
+}
